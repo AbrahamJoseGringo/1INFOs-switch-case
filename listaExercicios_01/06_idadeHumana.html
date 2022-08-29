@@ -8,10 +8,35 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
+    const idadeCao = parseInt(prompt("Informe a idade do seu cão"));
+    const porteCao = prompt("Qual o porte do seu cão (P-Pequeno | M-Médio | G-Grande):").toUpperCase();
+    let idadehumana;
 
     
     // PROCESSAMENTO
+    switch (porteCao) {
+        case "p":
+            idadehumana = idadeCao * 5;
+            break;
+        case "m":
+        idadehumana = idadeCao * 6;
+            break;
+        case "g":
+        idadehumana = idadeCao * 7;
+            break;
+            default:
+                idadehumana = 0;
+                break;
+    }
+switch (idadehumana) {
+    case 0:
+        document.write(`Porte do cão/cadela inválido!`)
+        break;
 
+    default:
+        document.write(`A idade do seu cão é de ${idadehumana}`)
+        break;
+}
     
     // SAÍDA
 
